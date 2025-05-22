@@ -380,3 +380,230 @@ h5 {
   }
 }
 */
+
+/* Gradiente de texto */
+.text-gradient {
+  background: linear-gradient(90deg, #00c3ff, #0047ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Imagens dos cards de planos */
+.plan-img {
+  max-width: 80px;
+  margin: 0 auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .plan-img {
+    max-width: 60px;
+  }
+}
+
+/* Botão WhatsApp Fixo */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50px;
+  padding: 12px 20px;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  background-color: #128c7e;
+}
+
+/* Plan Header */
+.plan-header {
+  background-color: #111;
+  color: white;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* Plan Footer */
+.plan-footer {
+  background-color: #111;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* Lista */
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-list li {
+  margin-bottom: 10px;
+}
+
+/* Botões WhatsApp */
+.btn-whats {
+  background-color: #25d366;
+  color: white;
+}
+
+.btn-whats:hover {
+  background-color: #128c7e;
+  color: white;
+}
+
+/* Seção de Planos */
+.plans-section {
+  background: linear-gradient(135deg, #0a0014 0%, #1a0033 100%);
+  padding: 6rem 0;
+}
+
+/* Cards de Planos */
+.plan-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(140, 82, 255, 0.15);
+}
+
+/* Cabeçalho do Plano */
+.plan-header {
+  background: linear-gradient(
+    135deg,
+    rgba(140, 82, 255, 0.1) 0%,
+    rgba(255, 51, 102, 0.1) 100%
+  );
+  padding: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.plan-header h5 {
+  color: #fff;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.plan-header h2 {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 1rem 0;
+}
+
+/* Imagem do Plano */
+.plan-img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 4px 8px rgba(140, 82, 255, 0.2));
+  transition: transform 0.3s ease;
+}
+
+.plan-card:hover .plan-img {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Lista de Features */
+.feature-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.feature-list li:last-child {
+  border-bottom: none;
+}
+
+.feature-list i {
+  color: #25d366;
+  font-size: 1.1rem;
+  background: rgba(37, 211, 102, 0.1);
+  padding: 8px;
+  border-radius: 50%;
+}
+
+/* Botão de Ação */
+.plan-footer {
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.btn-whats {
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  color: white;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  border: none;
+  width: 100%;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-whats:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+  background: linear-gradient(135deg, #128c7e, #25d366);
+}
+
+.btn-whats::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.btn-whats:hover::before {
+  left: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .plan-header h2 {
+    font-size: 2rem;
+  }
+
+  .feature-list li {
+    font-size: 0.9rem;
+  }
+
+  .btn-whats {
+    padding: 0.75rem 1.5rem;
+  }
+}
