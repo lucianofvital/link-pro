@@ -6,11 +6,23 @@
     <title>LinkPro - Mini Site Profissional para Bio</title>
 
     <!-- Meta Tags para WhatsApp, Facebook, LinkedIn -->
-<meta property="og:title" content="LinkPro | Mini Site Profissional para Bio do instagram." />
-<meta property="og:description" content="Transforme seu link na bio em um mini site profissional. Aumente suas vendas com o LinkPro." />
-<meta property="og:image" content="https://lucianofvital.github.io/link-pro/img/link-pro1.png" />
-<meta property="og:url" content="https://lucianofvital.github.io/link-pro" />
-<meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="LinkPro | Mini Site Profissional para Bio do instagram."
+    />
+    <meta
+      property="og:description"
+      content="Transforme seu link na bio em um mini site profissional. Aumente suas vendas com o LinkPro."
+    />
+    <meta
+      property="og:image"
+      content="https://lucianofvital.github.io/link-pro/img/link-pro1.png"
+    />
+    <meta
+      property="og:url"
+      content="https://lucianofvital.github.io/link-pro"
+    />
+    <meta property="og:type" content="website" />
 
     <!-- SEO Tags -->
     <meta
@@ -81,6 +93,107 @@
       </div>
     </section>
 
+    <!-- Seção de Clientes -->
+    <section class="clients-section py-5">
+      <div class="container">
+        <h2 class="section-title text-center mb-2">💫 Nossos Clientes</h2>
+        <p class="section-subtitle text-center mb-5">
+          Empresas que já transformaram seus resultados com o LinkPRO
+        </p>
+
+        <div class="row g-4">
+          <!-- Card Cliente 1 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="client-card">
+              <div class="card-image">
+                <img src="img/client1.jpg" alt="Cliente 1" class="img-fluid" />
+              </div>
+              <div class="card-body">
+                <h3>Vital Store</h3>
+                <p>Link na Bio que aumentou vendas em 300%!</p>
+                <a
+                  href="#"
+                  class="btn-view-site"
+                  data-bs-toggle="modal"
+                  data-bs-target="#siteModal"
+                  data-site-url="https://lucianofvital.github.io/link-pro"
+                >
+                  <i class="fas fa-desktop me-2"></i>Ver Demonstração
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Cliente 2 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Portfolio -->
+    <section class="portfolio-section py-5">
+      <div class="container">
+        <div
+          id="portfolioCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#portfolioCarousel"
+              data-bs-slide-to="0"
+              class="active"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#portfolioCarousel"
+              data-bs-slide-to="1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#portfolioCarousel"
+              data-bs-slide-to="2"
+            ></button>
+          </div>
+
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="portfolio-frame">
+                <img src="img/link-bio.png" alt="Portfolio 1" />
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="portfolio-frame">
+                <img src="img/one-page.png" alt="Portfolio 2" />
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="portfolio-frame">
+                <img src="img/landing-page.png" alt="Portfolio 3" />
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#portfolioCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#portfolioCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer class="text-center py-4">
       <small class="text-vital-muted">
@@ -99,6 +212,45 @@
     >
       <i class="fab fa-whatsapp"></i>
     </a>
+
+    <!-- Site Preview Modal -->
+    <div
+      class="modal fade"
+      id="siteModal"
+      tabindex="-1"
+      aria-labelledby="siteModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="siteModalLabel">
+              <i class="fas fa-mobile-alt me-2"></i>Visualização do LinkPRO
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Fechar"
+            ></button>
+          </div>
+          <div class="modal-body p-0">
+            <div class="site-preview-wrapper">
+              <iframe id="sitePreviewFrame" src="" frameborder="0"></iframe>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              <i class="fas fa-times me-2"></i>Fechar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
