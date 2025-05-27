@@ -1,298 +1,107 @@
-/*
-* Link PRO - CSS Otimizado
-* Versão: 2.0.0
-* Autor: GitHub Copilot
-* Data: 22/05/2025
-*/
-
-/* ----------------- */
-/* Variáveis Globais */
-/* ----------------- */
 :root {
-  /* Cores */
-  --color-primary: #8c52ff;
-  --color-secondary: #ff3366;
-  --color-accent: #1bdaff;
-  --color-dark: #0a0014;
-  --color-light: #eeeeee;
-  --color-success: #25d366;
-  --color-success-dark: #128c7e;
-  --color-warning: #ffd700;
+  /* Colors */
+  --primary: #6c5ce7;
+  --secondary: #00b894;
+  --accent: #ff6b6b;
+  --dark: #2d3436;
+  --light: #ffffff;
+  --gradient-1: #6c5ce7;
+  --gradient-2: #8e2de2;
 
-  /* Gradientes */
-  --gradient-primary: linear-gradient(
-    135deg,
-    var(--color-secondary),
-    var(--color-primary)
-  );
-  --gradient-secondary: linear-gradient(
-    135deg,
-    var(--color-accent),
-    var(--color-primary)
-  );
-  --gradient-glass: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.05)
-  );
-  --gradient-dark: linear-gradient(90deg, #1a1a1a, #000000);
-
-  /* Efeitos */
+  /* Shadows */
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.2);
-  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.3);
-  --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.4);
-
-  /* Transições */
-  --transition-fast: 0.2s ease;
-  --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-slow: 0.5s ease;
-
-  /* Layout */
-  --container-padding: 2rem;
-  --section-spacing: 6rem;
-  --border-radius-sm: 8px;
-  --border-radius-md: 16px;
-  --border-radius-lg: 24px;
-  --border-radius-full: 9999px;
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* ------------ */
-/* Reset Global */
-/* ------------ */
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Base Styles */
 body {
-  background: var(--color-dark);
-  color: var(--color-light);
-  font-family: "Outfit", sans-serif;
-  line-height: 1.6;
+  font-family: "Inter", sans-serif;
+  color: var(--dark);
   overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
-/* --------------- */
-/* Estilos Base */
-/* --------------- */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--container-padding);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-/* ------------------ */
-/* Timer de Promoção */
-/* ------------------ */
-.offer-timer {
-  background: var(--gradient-dark);
-  padding: 0.5rem 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  box-shadow: var(--shadow-md);
-}
-
-.timer-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.timer-label {
-  color: var(--color-warning);
-  font-weight: 600;
-  animation: pulse 2s infinite;
-}
-
-.countdown {
-  display: flex;
-  gap: 0.75rem;
-  background: rgba(255, 215, 0, 0.1);
-  padding: 0.5rem 1rem;
-  border-radius: var(--border-radius-full);
-  border: 1px solid rgba(255, 215, 0, 0.3);
-}
-
-.time-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 2.5rem;
-}
-
-.time-block__number {
-  color: var(--color-warning);
-  font-weight: 700;
-  font-size: 1.125rem;
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
-}
-
-.time-block__label {
-  font-size: 0.75rem;
-  color: rgba(255, 215, 0, 0.7);
-  text-transform: uppercase;
-}
-
-/* ---------- */
-/* Hero Area */
-/* ---------- */
+/* Hero Section */
 .hero {
-  background: var(--gradient-primary);
-  padding: calc(var(--section-spacing) + 2rem) 0 var(--section-spacing);
-  margin-top: 3rem;
-  position: relative;
-  border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
-  box-shadow: var(--shadow-xl);
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("../images/patterns/grid.svg");
-  opacity: 0.1;
-  animation: float 20s linear infinite;
-}
-
-/* -------------- */
-/* Cards & Planos */
-/* -------------- */
-.card {
-  background: var(--gradient-glass);
-  backdrop-filter: blur(10px);
-  border-radius: var(--border-radius-lg);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: var(--shadow-lg);
-  transition: var(--transition-base);
-  overflow: hidden;
-}
-
-.card:hover {
-  transform: translateY(-0.5rem);
-  box-shadow: var(--shadow-xl);
-}
-
-.plan-card {
+  padding: 120px 0 80px;
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-}
-
-.plan-header {
-  padding: 2rem;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.2);
-}
-
-.plan-features {
-  padding: 2rem;
-  flex: 1;
-}
-
-.plan-footer {
-  padding: 1.5rem;
-  background: rgba(0, 0, 0, 0.2);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* ------------ */
-/* Componentes */
-/* ------------ */
-.btn {
-  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  padding: 0.75rem 1.5rem;
-  border-radius: var(--border-radius-full);
-  font-weight: 600;
-  transition: var(--transition-base);
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
 }
 
-.btn--whatsapp {
-  background: var(--color-success);
-  color: white;
-  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+.hero-content {
+  padding-right: 50px;
 }
 
-.btn--whatsapp:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
-  background: var(--color-success-dark);
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 30px;
 }
 
-/* ----------- */
-/* Utilitários */
-/* ----------- */
-.text-gradient {
-  background: var(--gradient-primary);
+.gradient-text {
+  background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.glass-effect {
-  background: var(--gradient-glass);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.hero-description {
+  font-size: 1rem;
+  color: var(--dark);
+  opacity: 0.8;
+  margin-bottom: 20px;
 }
 
-/* ------------- */
-/* Media Queries */
-/* ------------- */
-@media (max-width: 768px) {
-  :root {
-    --container-padding: 1rem;
-    --section-spacing: 4rem;
-  }
-
-  .timer-wrapper {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .hero {
-    margin-top: 4rem;
-    padding: var(--section-spacing) 0;
-  }
-
-  .countdown {
-    padding: 0.25rem 0.75rem;
-  }
-
-  .time-block {
-    min-width: 2rem;
-  }
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 30px;
+  background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
+  color: var(--light);
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
 }
 
-/* ----------- */
-/* Animações */
-/* ----------- */
-@keyframes float {
-  from {
-    background-position: 0 0;
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  color: var(--light);
+}
+
+/* WhatsApp Float */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: #25d366;
+  color: var(--light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: var(--shadow-md);
+  z-index: 1000;
+  animation: bounce 2s infinite;
+}
+
+/* Animations */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
   }
-  to {
-    background-position: 100% 100%;
+  50% {
+    transform: translateY(-10px);
   }
 }
 
@@ -306,4 +115,68 @@ h6 {
   100% {
     transform: scale(1);
   }
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero {
+    padding: 60px 0;
+    text-align: center;
+  }
+
+  .hero-content {
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .social-nav {
+    flex-direction: row;
+    top: auto;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .social-links {
+    flex-direction: row;
+  }
+}
+
+.btn-vital-social {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--vital-light);
+  color: var(--vital-secondary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 1.2rem;
 }
