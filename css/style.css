@@ -242,3 +242,237 @@ body {
     font-size: 1rem;
   }
 }
+
+/* Showcase Section */
+.vital-showcase {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  overflow: hidden;
+}
+
+.mockup-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.mockup-phone {
+  max-height: 600px;
+  border-radius: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  border: 12px solid #333;
+  transition: transform 0.3s ease;
+}
+
+.carousel-item:hover .mockup-phone {
+  transform: scale(1.02);
+}
+
+/* Features Section */
+.vital-features {
+  background: #ffffff;
+}
+
+.feature-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+  text-align: center;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, #6c5ce7, #a363d9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #2d3436;
+}
+
+.feature-card p {
+  font-size: 0.9rem;
+  color: #636e72;
+  margin: 0;
+}
+
+/* CTA Section */
+.vital-cta {
+  background: linear-gradient(135deg, #6c5ce7 0%, #a363d9 100%);
+  color: white;
+}
+
+.cta-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.cta-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.cta-description {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.vital-button-cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  background: #25d366;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.vital-button-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .mockup-phone {
+    max-height: 400px;
+  }
+
+  .cta-title {
+    font-size: 2rem;
+  }
+
+  .cta-description {
+    font-size: 1rem;
+  }
+
+  .vital-button-cta {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Share Button and Modal */
+.share-button {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
+    color: white;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.share-button:hover {
+    transform: translateY(-3px) rotate(360deg);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.share-button[data-tooltip]::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.share-button:hover[data-tooltip]::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Share Modal Styles */
+.modal-content {
+    border-radius: 15px;
+    border: none;
+}
+
+.modal-header {
+    background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
+    color: white;
+    border: none;
+    border-radius: 15px 15px 0 0;
+}
+
+.share-link-container .input-group {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.share-link-container input {
+    border: 1px solid #eee;
+    padding: 12px;
+    font-size: 14px;
+}
+
+.share-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.share-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 25px;
+    background: #25D366;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.share-whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(37, 211, 102, 0.3);
+    color: white;
+}
+
+.qr-code-container {
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.qr-code-image {
+    max-width: 200px;
+    height: auto;
+}

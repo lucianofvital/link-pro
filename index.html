@@ -91,6 +91,148 @@
       </div>
     </section>
 
+    <!-- Showcase Section -->
+    <section class="vital-showcase py-5">
+      <div class="container">
+        <h2 class="section-title text-center mb-4">
+          Designs Profissionais para sua Bio
+        </h2>
+
+        <div
+          id="showcaseCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="mockup-container">
+                <img
+                  src="https://picsum.photos/400/800"
+                  alt="LinkPro Example 1"
+                  class="mockup-phone"
+                />
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="mockup-container">
+                <img
+                  src="https://picsum.photos/400/800"
+                  alt="LinkPro Example 2"
+                  class="mockup-phone"
+                />
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="mockup-container">
+                <img
+                  src="https://picsum.photos/400/800"
+                  alt="LinkPro Example 3"
+                  class="mockup-phone"
+                />
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#showcaseCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#showcaseCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="vital-features py-5">
+      <div class="container">
+        <h2 class="section-title text-center mb-5">
+          Tudo que você precisa em um só lugar
+        </h2>
+
+        <div class="row g-4">
+          <!-- Feature Items -->
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card">
+              <i class="fas fa-user-circle feature-icon"></i>
+              <h3>Perfil Profissional</h3>
+              <p>Apresentação completa e personalizada</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card">
+              <i class="fas fa-share-alt feature-icon"></i>
+              <h3>Redes Sociais</h3>
+              <p>Integração com todas suas redes</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card">
+              <i class="fas fa-shopping-cart feature-icon"></i>
+              <h3>Loja Virtual</h3>
+              <p>Venda seus produtos diretamente</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card">
+              <i class="fas fa-play-circle feature-icon"></i>
+              <h3>Vídeos YouTube</h3>
+              <p>Integração com seu canal</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card">
+              <i class="fas fa-images feature-icon"></i>
+              <h3>Galeria & Catálogo</h3>
+              <p>Mostre seu trabalho com estilo</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="feature-card">
+              <i class="fas fa-code feature-icon"></i>
+              <h3>HTML Personalizado</h3>
+              <p>Adicione seus próprios códigos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="vital-cta py-5">
+      <div class="container">
+        <div class="cta-wrapper text-center">
+          <h2 class="cta-title">Pronto para começar?</h2>
+          <p class="cta-description">
+            Receba seu LinkPro personalizado ainda hoje e comece a multiplicar
+            seus resultados!
+          </p>
+          <a
+            href="https://wa.me/5581997602414?text=Olá! Quero criar meu LinkPro"
+            class="vital-button-cta pulse"
+            target="_blank"
+          >
+            <i class="fab fa-whatsapp me-2"></i>
+            Criar meu LinkPro agora
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer class="text-center py-4">
       <small class="text-vital-muted">
@@ -100,6 +242,67 @@
         >
       </small>
     </footer>
+
+    <!-- Share Button and Modal -->
+    <button
+      class="share-button"
+      data-bs-toggle="modal"
+      data-bs-target="#shareModal"
+      data-tooltip="Compartilhar meu LinkPro"
+    >
+      <i class="fas fa-share-alt"></i>
+    </button>
+
+    <!-- Share Modal -->
+    <div
+      class="modal fade"
+      id="shareModal"
+      tabindex="-1"
+      aria-labelledby="shareModalLabel"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="shareModalLabel">
+              <i class="fas fa-share-alt me-2"></i>Compartilhar LinkPro
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Fechar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="share-link-container mb-4">
+              <div class="input-group">
+                <input
+                  type="text"
+                  id="shareLink"
+                  class="form-control"
+                  value="https://bit.ly/linkpro"
+                  readonly
+                />
+                <button class="btn btn-primary" id="copyButton">
+                  <i class="fas fa-copy me-2"></i>Copiar
+                </button>
+              </div>
+            </div>
+
+            <div class="share-buttons mb-4">
+              <a href="#" class="share-whatsapp" id="shareWhatsApp">
+                <i class="fab fa-whatsapp me-2"></i>Compartilhar no WhatsApp
+              </a>
+            </div>
+
+            <div class="qr-code-container text-center">
+              <p class="text-muted mb-2">Escaneie o QR Code</p>
+              <img id="qrCode" src="" alt="QR Code" class="qr-code-image" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- WhatsApp Button -->
     <a
