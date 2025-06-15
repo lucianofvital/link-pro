@@ -28,6 +28,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  background-color: var(--light);
 }
 
 .hero-content {
@@ -36,7 +37,7 @@ body {
 
 .hero-title {
   font-size: 3.5rem;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.2;
   margin-bottom: 30px;
 }
@@ -94,6 +95,10 @@ body {
   animation: bounce 2s infinite;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Animations */
 @keyframes bounce {
   0%,
@@ -140,13 +145,13 @@ body {
 /* Responsive */
 @media (max-width: 992px) {
   .hero {
-    padding: 60px 0;
+    padding: 30px 0;
     text-align: center;
   }
 
   .hero-content {
-    padding-right: 0;
-    margin-bottom: 40px;
+    padding-right: 5px;
+    margin-bottom: 5px;
   }
 
   .hero-title {
@@ -163,83 +168,6 @@ body {
 
   .social-links {
     flex-direction: row;
-  }
-}
-
-.btn-vital-social {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--vital-light);
-  color: var(--vital-secondary);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 0.5rem;
-  transition: all 0.3s ease;
-  border: none;
-  font-size: 1.2rem;
-}
-
-/* Seção Portfolio */
-.portfolio-section {
-  background: white;
-}
-
-.portfolio-frame {
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 0 auto;
-  max-width: 800px;
-}
-
-.portfolio-frame img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  width: 50px;
-  height: 50px;
-  background: white;
-  border-radius: 50%;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: 0.9;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  filter: invert(1) grayscale(100);
-}
-
-.carousel-indicators {
-  bottom: -50px;
-}
-
-.carousel-indicators button {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: var(--gradient-1);
-  opacity: 0.5;
-}
-
-.carousel-indicators button.active {
-  opacity: 1;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .section-subtitle {
-    font-size: 1rem;
   }
 }
 
@@ -374,105 +302,113 @@ body {
 
 /* Share Button and Modal */
 .share-button {
-    position: fixed;
-    bottom: 30px;
-    left: 30px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
-    color: white;
-    border: none;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 999;
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
+  color: white;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 999;
 }
 
 .share-button:hover {
-    transform: translateY(-3px) rotate(360deg);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  transform: translateY(-3px) rotate(360deg);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 .share-button[data-tooltip]::before {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: 10px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    background: rgba(0,0,0,0.8);
-    color: white;
-    font-size: 14px;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
 }
 
 .share-button:hover[data-tooltip]::before {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Share Modal Styles */
 .modal-content {
-    border-radius: 15px;
-    border: none;
+  border-radius: 15px;
+  border: none;
 }
 
 .modal-header {
-    background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
-    color: white;
-    border: none;
-    border-radius: 15px 15px 0 0;
+  background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
+  color: white;
+  border: none;
+  border-radius: 15px 15px 0 0;
 }
 
 .share-link-container .input-group {
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .share-link-container input {
-    border: 1px solid #eee;
-    padding: 12px;
-    font-size: 14px;
+  border: 1px solid #eee;
+  padding: 12px;
+  font-size: 14px;
 }
 
 .share-buttons {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
 }
 
 .share-whatsapp {
-    display: inline-flex;
-    align-items: center;
-    padding: 12px 25px;
-    background: #25D366;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: 500;
-    transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 25px;
+  background: #25d366;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 .share-whatsapp:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(37, 211, 102, 0.3);
-    color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(37, 211, 102, 0.3);
+  color: white;
 }
 
 .qr-code-container {
-    padding: 20px;
-    background: #f8f9fa;
-    border-radius: 8px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
 }
 
 .qr-code-image {
-    max-width: 200px;
-    height: auto;
+  max-width: 200px;
+  height: auto;
+}
+
+footer {
+  background: var(--dark);
+  color: var(--light);
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
 }
